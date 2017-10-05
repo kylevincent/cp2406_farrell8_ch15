@@ -14,6 +14,7 @@ public class DebugFifteen3 extends JFrame implements KeyListener
    {
       setTitle("Debug Key Frame");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      con = this.getContentPane();
       con.setLayout(grid);
       con.add(textArea);
       con.add(label);
@@ -22,7 +23,7 @@ public class DebugFifteen3 extends JFrame implements KeyListener
    }
 
    @Override
-   public void keyTyped()
+   public void keyTyped(KeyEvent e)
    {
       char c = e.getKeyChar();
       label.setText ("Key Typed: " + c);
@@ -30,6 +31,10 @@ public class DebugFifteen3 extends JFrame implements KeyListener
 
    @Override
    public void keyReleased(KeyEvent e)
+   {
+   }
+   @Override
+   public void keyPressed(KeyEvent e)
    {
    }
 
